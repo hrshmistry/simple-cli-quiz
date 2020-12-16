@@ -9,14 +9,14 @@ var score = 0;
 
 var questionsList = [{
   question: chalk.bold.greenBright("Am i older than 25? "),
-  answer: "No",
+  answer: "NO",
 }, {
   question: chalk.bold.greenBright("Is my hometown Delhi? "),
-  answer: "No",
+  answer: "NO",
 },
 {
   question: chalk.bold.greenBright("What is my name? "),
-  answer: "Harsh",
+  answer: "HARSH",
 },
 {
   question: chalk.bold.greenBright("What is my age? "),
@@ -24,7 +24,7 @@ var questionsList = [{
 },
 {
   question: chalk.bold.greenBright("Which is my favourite Browser? "),
-  answer: "Brave",
+  answer: "BRAVE",
 },];
 
 for (var i = 0; i < questionsList.length; i++) {
@@ -35,7 +35,7 @@ for (var i = 0; i < questionsList.length; i++) {
 
 function play(question, answer) {
   var userAns = readlineSync.question(question);
-  if (userAns === answer) {
+  if (userAns.toUpperCase() === answer) {
     console.log(chalk.dim("you are right!"));
     score = score + 1;
   } else {
